@@ -1,0 +1,17 @@
+/* Efeitos de Fade-In e Entrada */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.animate__fadeIn {
+    animation: fadeIn 1s ease-out;
+}
+
+.animate__fadeInUp {
+    animation: fadeInUp 1s ease-out;
+}

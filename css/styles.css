@@ -1,0 +1,181 @@
+/* Resetando alguns estilos padrões */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fonte personalizada */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f0f0f0;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Cabeçalho */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: linear-gradient(135deg, #333, #555);
+    padding: 15px 0;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header nav ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 20px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #ff7f00;
+}
+
+/* Seção Hero */
+.hero {
+    height: 100vh;
+    background: url('images/hero-bg.jpg') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-blend-mode: overlay;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hero h1 {
+    font-size: 4rem;
+    color: #fff;
+    margin-bottom: 20px;
+    animation: fadeIn 1.5s ease-out;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    color: #fff;
+    opacity: 0.8;
+}
+
+.btn {
+    background-color: #ff7f00;
+    padding: 12px 25px;
+    border-radius: 30px;
+    color: #fff;
+    font-size: 18px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #e06b00;
+    transform: scale(1.05);
+}
+
+/* Seção de Serviços */
+.services {
+    background: #fff;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.services h2 {
+    font-size: 3rem;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.service-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.service-cards .card {
+    background-color: #f9f9f9;
+    padding: 30px;
+    width: 30%;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-cards .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+.service-cards .card h3 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.service-cards .card p {
+    font-size: 1rem;
+    color: #777;
+}
+
+/* Rodapé */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+footer .social-links a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+footer .social-links a:hover {
+    color: #ff7f00;
+}
+
+/* Animações */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.animate__fadeIn {
+    animation: fadeIn 1s ease-out;
+}
+
+/* Estilo Responsivo */
+@media (max-width: 768px) {
+    .service-cards .card {
+        width: 45%;
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .service-cards .card {
+        width: 100%;
+    }
+}
